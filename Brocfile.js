@@ -25,4 +25,11 @@ var app = new EmberApp({
 
 // module.exports = app.toTree();
 app.import('bower_components/fastclick/lib/fastclick.js');
-module.exports = mergeTrees([app.toTree()]);
+
+var fontTree = pickFiles('bower_components/font-awesome/fonts', {
+  srcDir: '/',
+  files: ['fontawesome-webfont.eot','fontawesome-webfont.ttf','fontawesome-webfont.svg','fontawesome-webfont.woff'],
+  destDir: '/fonts/awesome-font'
+});
+
+module.exports = mergeTrees([fontTree, app.toTree()]);

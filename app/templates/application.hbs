@@ -1,7 +1,24 @@
-<h2 id='title'>Welcome to Ember.js</h2>
-<button type="button" class="btn btn-primary">button</button>
-<i class="fa fa-won"></i>
-<i class="fa fa-jpy"></i>
-<span class="glyphicon glyphicon-bell"></span>
-<i class="fa fa-bus fa-2x"></i>
-{{outlet}}
+<nav class="navbar navbar-inverse navbar-fixed-top" id="main-navber" role="navigation">
+	<div class="container">
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-collapse">
+				<span class="sr-only">Toggle Navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			{{#link-to 'index' class='navbar-brand'}}Product Name{{/link-to}}
+		</div>
+		<div class="collapse navbar-collapse" id="navbar-collapse">
+			<ul class="nav navbar-nav">
+				<li><a href="#sectoin-testimonials">Testimonials</a></li>
+				<li><a href="#section-feature">feature</a></li>
+				<li><a href="#section-gallery">Gallery</a></li>
+				<li><a href="#section-faq">F.A.Q</a></li>
+				<li><a href="#section-contact">contact</a></li>
+
+			</ul>
+		</div> <!-- end collapse -->
+	</div> <!-- end container -->
+</nav>
